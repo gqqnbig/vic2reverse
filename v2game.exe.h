@@ -20,3 +20,10 @@ struct ConsoleCommand
   void *handler;
   char numberOfArguments;
 };
+
+class Pop {
+    char unknown[12];
+    int id;
+    char unknown2[0x4c];
+    int size;
+};
