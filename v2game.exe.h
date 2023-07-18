@@ -6,7 +6,9 @@ struct Game
 
 struct Country
 {
-  char unknown[424];
+  char unknown[28];
+  char tag[3];
+  char unknown2[393];
   int plurality; //minimum is 1000, maximum is 100000.
 };
 
