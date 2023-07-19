@@ -21,9 +21,17 @@ struct ConsoleCommand
   char numberOfArguments;
 };
 
+class Drawer {
+    //0 is white; 1 is red.
+    bool isError;
+    char unknown[30];
+};
+
+//Total size is 0x2A8.
 class Pop {
     char unknown[12];
     int id;
-    char unknown2[0x4c];
+    char unknown2[72];
     int size;
+    char unknown3[585];
 };
