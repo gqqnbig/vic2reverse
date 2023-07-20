@@ -29,9 +29,13 @@ class Drawer {
 
 //Total size is 0x2A8.
 class Pop {
-    char unknown[12];
-    int id;
-    char unknown2[72];
-    int size;
-    char unknown3[585];
+	char unknown[12];
+	int id;
+	char unknown2[72];
+	unsigned int size;
+	char unknown3[193];
+	unsigned int militancy15;
+	char unknown4;
+	unsigned int consciousness15;
+	char unknown5[378];
 };
