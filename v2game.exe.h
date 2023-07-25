@@ -39,3 +39,21 @@ class Pop {
 	unsigned int consciousness15;
 	char unknown5[378];
 };
+
+struct DefinedConstants
+{
+  char unknown[16];
+  char *economy;
+  char unknown2[12];
+  char *military;
+  char unknown3[12];
+  char *diplomacy;
+  char unknown4[10];
+  char *country;
+  char unknown5[12];
+  char *pops;
+  char unknown6[10];
+  char *ai;
+  char unknown7[12];
+  char *graphics;
+};
