@@ -2,6 +2,9 @@ struct Game
 {
   char unknown[2856];
   int speed;
+  char unknown2[48];
+  char currentCountryTag[3];
+  __declspec(align(2)) char unknown3[2856];
 };
 
 struct Country
