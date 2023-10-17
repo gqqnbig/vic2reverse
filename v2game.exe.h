@@ -1,3 +1,25 @@
+struct FrontEndUIObservers
+{
+	char unknown1[12];
+	char unknown2[44];
+	char settings[44];
+	char singlePlayer[44];
+	char multiPlayer[44];
+	char nudge[44];
+
+
+	char exit[44];
+	char credits[44];
+	char tutorial[44];
+	char unknown3[44];
+	char facebook[44];
+	char twitter[44];
+	char forum[44];
+
+	char homepage[44];
+}
+
+
 struct Game
 {
   char unknown[2856];
