@@ -20,6 +20,18 @@ struct FrontEndUIObservers
 }
 
 
+struct Province
+{
+  int unknown1[31];
+  int unitX;
+  int unitY;
+  int unknown2[12];
+  int id;
+  int unknown3[11];
+  char *name;
+}
+
+
 struct Game
 {
   char unknown[2856];
