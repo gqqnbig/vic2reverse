@@ -20,6 +20,25 @@ struct FrontEndUIObservers
 }
 
 
+struct Movement
+{
+  Subclass_vtable *vtable;
+  int sth[22];
+  Province *province;
+};
+
+struct Subclass_vtable
+{
+  int vfunc1;
+  int vfunc2;
+  int vfunc3;
+  int vfunc4;
+  int vfunc5;
+  int vfunc6;
+  int vfunc7;
+  void *sub_90AF90;
+};
+
 struct Province
 {
   int unknown1[31];
@@ -29,6 +48,20 @@ struct Province
   int id;
   int unknown3[11];
   char *name;
+}
+
+struct Army
+{
+  Army_vtable *vtable;
+  int unknown[54];
+  Movement *movement;
+};
+
+
+struct Army_vtable 
+{
+	void* unknown[8];
+	void* Army_vtable_getName;
 }
 
 
