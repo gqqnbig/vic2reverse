@@ -1,3 +1,12 @@
+struct NavalSupplyManager
+{
+  int unknown[88];
+  int totalSupplyThroughput;
+  int requiredSupplyThroughput;
+  int futureRequiredSupplyThroughput;
+};
+
+
 struct FrontEndUIObservers
 {
 	char unknown1[12];
