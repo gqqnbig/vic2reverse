@@ -7,6 +7,24 @@ struct NavalSupplyManager
 };
 
 
+
+struct OutlineSection
+{
+	OutlineSection_vtable* vtable;
+	int unknown[11];
+	int sectionKey; // 0 is OL_REBEL_OCCUPATIONS
+}
+
+
+struct OutlineSection_vtable 
+{
+	void* unknown1[9];
+	void* drawOutlineSection;
+	void* unknown2[4]
+	void* hasItems;
+}
+
+
 struct FrontEndUIObservers
 {
 	char unknown1[12];
