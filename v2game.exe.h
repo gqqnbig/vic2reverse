@@ -85,11 +85,14 @@ struct Army
 };
 
 
-struct Army_vtable 
+struct Army_vtable
 {
-	void* unknown[8];
-	void* Army_vtable_getName;
-}
+  void *unknown1[8];
+  void *Army_vtable_getName;
+  void *unknown2[21];
+  void *Army_vtable_getMissingSupply;
+};
+
 
 
 struct Game
@@ -109,6 +112,13 @@ struct Country
   int plurality; //minimum is 1000, maximum is 100000.
 };
 
+/* 168 */
+struct TooltipSystem
+{
+  char unknown[34];
+  char *name;
+};
+
 //First undefine fields in IDA assembly view, then right-click on the first field,
 //choose this struct.
 struct ConsoleCommand
@@ -119,22 +129,32 @@ struct ConsoleCommand
 };
 
 class Drawer {
-    //0 is white; 1 is red.
-    bool isError;
-    char unknown[30];
+    //0 is error; 1 is red.
+    int isNormal;
+	std::string message;
 };
 
-//Total size is 0x2A8.
-class Pop {
-	char unknown[12];
-	int id;
-	char unknown2[72];
-	unsigned int size;
-	char unknown3[193];
-	unsigned int militancy15;
-	char unknown4;
-	unsigned int consciousness15;
-	char unknown5[378];
+/* 172 */
+struct FileInfo
+{
+  char *fileName;
+  char unknown[12];
+  int fileNameLength;
+  char unknown2[8];
+};
+
+/* 173 */
+struct Pop
+{
+  char unknown[12];
+  int id;
+  char unknown2[72];
+  unsigned int size;
+  char unknown3[193];
+  unsigned int militancy15;
+  char unknown4;
+  unsigned int consciousness15;
+  char unknown5[378];
 };
 
 struct DefinedConstants
@@ -219,3 +239,21 @@ struct PopsConstants
   __int64 LARGE_POPULATION_LIMIT;
   __int64 LARGE_POPULATION_INFLUENCE_PENALTY_CHUNK;
 };
+
+/* 187 */
+struct PHYSFS_file;
+
+/* 188 */
+struct StringHolder
+{
+  char *buffer;
+  int length;
+};
+
+/* 189 */
+struct std::string
+{
+  char buffer[16];
+  int length;
+};
+
